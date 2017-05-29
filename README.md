@@ -50,9 +50,10 @@ Just run in terminal:
 ```
 ./bin/ecs-composer
 ./bin/ecs-composer -u userName -k apiKey -p Project 
+./bin/ecs-composer -c config.json
 ```
 ```
-Usage: ./bin/ecs-composer [-k apiKey, --apiKey apiKey] [--help] [-p project, --project project] [--url url] [-u userName, --userName userName] [-v, --version]
+Usage: ./bin/ecs-composer [-k apiKey, --apiKey apiKey] [-c config, --config config] [--help] [-p project, --project project] [--url url] [-u userName, --userName userName] [-v, --version]
 
 Optional Arguments:
 	-u userName, --userName userName
@@ -63,6 +64,8 @@ Optional Arguments:
 		project name
 	--url url
 		url
+	-c config, --config config
+		config path
 	--help
 		Prints a usage statement
 	-v, --version
