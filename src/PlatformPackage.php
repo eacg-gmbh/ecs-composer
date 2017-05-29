@@ -30,12 +30,27 @@ class PlatformPackage
 	 * @var array
 	 */
 	const PLATFORMS = array(
-		'php' => array(
+		// php
+		'/(?:php(?:-64bit|-ipv6|-zts|-debug)?)/i' => array(
 			'licenses' => array(self::PHP_LICENSE),
-			'homepageUrl' => 'http://php.net',
+			'homepageUrl' => 'http://php.net/',
 			'repoUrl' => self::PHP_REPO_URL,
 			// Uncomment it to include PHP extensions
 			//'dependencies' => 'getPHPDependencies'
+		),
+		// A virtual machine designed for executing programs written in Hack and PHP.
+		'/hhvm/i' => array(
+			'licenses' => array(self::PHP_LICENSE),
+			'homepageUrl' => 'http://hhvm.com/',
+			'repoUrl' => 'https://github.com/facebook/hhvm',
+			// Uncomment it to include PHP extensions
+			//'dependencies' => 'getPHPDependencies'
+		),
+		// virtual dependency
+		'/composer-plugin-api/' => array(
+			'licenses' => array(array('name' => 'MIT')),
+			'homepageUrl' => 'https://getcomposer.org/',
+			'repoUrl' => 'https://github.com/composer/composer.git',
 		)
 	);
 	/**
@@ -62,11 +77,16 @@ class PlatformPackage
 	 */
 	public static function get($name)
 	{
-		$result = array_key_exists($name, self::PLATFORMS) ? self::PLATFORMS[$name] : array();
+		$result = array();
+		foreach(self::PLATFORMS as $platformRegex => $platformInformation){
+			if(preg_match($platformRegex, $name)) {
+				$result = $platformInformation;
+			}
+		}
 		if(isset($result['dependencies'])) {
 			$result['dependencies'] = self::$result['dependencies']();
 		}
-		if(in_array(preg_replace('/^ext-/', '', $name), self::PHP_EXTENSIONS)){
+		if(in_array(preg_replace('/^(ext|lib)-/i', '', $name), self::PHP_EXTENSIONS)){
 			$result['licenses'] = array(self::PHP_LICENSE);
 			$result['repoUrl'] = self::getExtensionUrl($name);
 		}

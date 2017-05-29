@@ -104,7 +104,7 @@ class ComposerScanner
 		}
 
 		if ($package->isPlatform()){
-			$result = array_merge_recursive($result, PlatformPackage::get($package->getName()));
+			$result = array_merge($result, PlatformPackage::get($package->getName()));
 		}
 		return $result;
 	}
