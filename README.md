@@ -53,7 +53,8 @@ You also may initiate transfer to ECS server manually by executing following com
 ./vendor/bin/ecs-composer -c config.json
 ```
 ```
-Usage: ./bin/ecs-composer [-k apiKey, --apiKey apiKey] [-c config, --config config] [--help] [-p project, --project project] [--url url] [-u userName, --userName userName] [-v, --version]
+Usage: ./bin/ecs-composer [-k apiKey, --apiKey apiKey] [-c config, --config config] [--help]
+       [-p project, --project project] [--url url] [-u userName, --userName userName] [-v, --version]
 
 Optional Arguments:
 	-u userName, --userName userName
