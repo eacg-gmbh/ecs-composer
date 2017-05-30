@@ -18,7 +18,7 @@ Installation
 ============
 Run: `composer require eacg-gmbh/ecs-composer`
 
-Add `post-autoload-dump` script to the composer.json file to transfer dependency information right after `composer install`, `composer update`, `composer dumpautoload`
+Add `post-autoload-dump` script to the composer.json file to transfer dependency information right after `composer install`, `composer update` or `composer dumpautoload`:
 
 ```
 "scripts": {
@@ -28,7 +28,7 @@ Add `post-autoload-dump` script to the composer.json file to transfer dependency
 }
 ```
 
-Create `.ecsrc.json` in project directory to set creadentials for project or in home directory to set credentials globally.
+To store your credentials for automated transfer you may create `.ecsrc.json` in your project directory or in your home directory to set credentials globally (not recommended!)
 
 `.ecsrc.json` example:
 
@@ -45,8 +45,8 @@ Create `.ecsrc.json` in project directory to set creadentials for project or in 
 Usage
 =====
 
-Also you can manually run transfer to ECS server.
-Just run in terminal: 
+You also may initiate transfer to ECS server manually by executing following command via terminal:
+ 
 ```
 ./vendor/bin/ecs-composer
 ./vendor/bin/ecs-composer -u userName -k apiKey -p Project 
