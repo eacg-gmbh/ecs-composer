@@ -1,6 +1,6 @@
 {
     "name": "eacg-gmbh/ecs-composer",
-    "description": "Composer module to transfer dependency information to ECS server.",
+    "description": "Module for Composer allowing the transfer of package dependencies to ECS for further legal and vulnerability analysis. See https://ecs.eacg.de for a detailed service description.",
     "keywords": ["composer", "package", "plugin", "opensource", "dependency-analysis"],
     "license": "MIT",
     "authors": [
