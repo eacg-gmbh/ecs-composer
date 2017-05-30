@@ -4,7 +4,7 @@ ECS Composer
 [![Latest Stable Version](https://poser.pugx.org/eacg-gmbh/ecs-composer/version)](https://packagist.org/packages/eacg-gmbh/ecs-composer)
 [![License](https://poser.pugx.org/eacg-gmbh/ecs-composer/license)](https://packagist.org/packages/eacg-gmbh/ecs-composer)
 
-Composer module to transfer dependency information to ECS server. https://ecs-app.eacg.de
+Composer module to transfer dependency information to our ECS server. Find the solution at https://ecs-app.eacg.de
 
 Requirements
 ============
