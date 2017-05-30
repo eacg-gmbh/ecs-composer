@@ -48,9 +48,9 @@ Usage
 Also you can manually run transfer to ECS server.
 Just run in terminal: 
 ```
-./bin/ecs-composer
-./bin/ecs-composer -u userName -k apiKey -p Project 
-./bin/ecs-composer -c config.json
+./vendor/bin/ecs-composer
+./vendor/bin/ecs-composer -u userName -k apiKey -p Project 
+./vendor/bin/ecs-composer -c config.json
 ```
 ```
 Usage: ./bin/ecs-composer [-k apiKey, --apiKey apiKey] [-c config, --config config] [--help] [-p project, --project project] [--url url] [-u userName, --userName userName] [-v, --version]

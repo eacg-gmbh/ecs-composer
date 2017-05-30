@@ -9,7 +9,10 @@
             "email": "prizrack13@mail.ru"
         }
     ],
-    "type": "project",
+    "support": {
+        "email": "ecs-support@eacg.de"
+    },
+    "type": "library",
     "version": "1.0.0",
     "bin": ["bin/ecs-composer"],
     "require": {
