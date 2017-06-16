@@ -13,7 +13,7 @@
         "email": "ecs-support@eacg.de"
     },
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "bin": ["bin/ecs-composer"],
     "require": {
 		"php": ">=5.4",
