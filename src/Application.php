@@ -76,7 +76,7 @@ class Application
 		if ($climate->arguments->defined('help')){
 			$climate->usage();
 		} elseif($climate->arguments->defined('version')) {
-			$climate->out(self::version());
+			$climate->out(self::name() . ' version '. self::version());
 		} else {
 			$application = new \Composer\Console\Application();
 			$application->setAutoExit(false);
