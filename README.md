@@ -1,5 +1,5 @@
-ECS Composer 
-=======================
+TrustSource (ECS) Composer Plugin
+=================================
 
 [![Latest Stable Version](https://poser.pugx.org/eacg-gmbh/ecs-composer/version)](https://packagist.org/packages/eacg-gmbh/ecs-composer)
 [![License](https://poser.pugx.org/eacg-gmbh/ecs-composer/license)](https://packagist.org/packages/eacg-gmbh/ecs-composer)
@@ -45,7 +45,7 @@ To store your credentials for automated transfer you may create `.ecsrc.json` in
 Usage
 =====
 
-You also may initiate transfer to ECS server manually by executing following command via terminal:
+You also may initiate transfer to [TrustSource](https://www.trustsource.io) server manually by executing following command via terminal:
  
 ```
 ./vendor/bin/ecs-composer
